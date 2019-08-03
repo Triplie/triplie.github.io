@@ -1,6 +1,6 @@
  
 <?php
-	include_once "information/header.php";
+	include_once "header.php";
 ?>
 		<link rel='stylesheet' type='text/css' href='sait.css'>
 		<div class = "home-gallery">
@@ -17,5 +17,5 @@
 
 
 <?php
-	include "information/footer.php";
+	include "footer.php";
 ?>
