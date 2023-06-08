@@ -1,47 +1,29 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Название магаза</title>
-		<style type="text/css">
-		div{
-			font-size: 40px;
-			position: absolute;
-			z-index: 1;
-			color: red;
-		}
-		.blue{
-			height: 50%;
-			width: 100%;
-			position: absolute;
-			top:1px;
-			background-color: #000080;
-			z-index: 0;
-		}
-		.yellow {
-			height: 50%;
-			width: 100%;
-			position: absolute;
-			bottom:1px;
-			background-color: #FFFF00;
-			z-index: 0;
-		}
-
- 		</style>
-	</head>
-	<body>
-		<center>
-		<div class="Gleb">
-		<a href ="https://www.youtube.com/watch?v=RVc066eP6gc">ГЛЕБ ЛОХ</a>
-		<h1>(!!Кликабельно!!)</h1>
-		</div>
-		</center>
-
-		<div class ="blue">
-
-		</div>
-
-		<div class="yellow">
-
-		</div>
-	</body>
+<head>
+  <title>Генератор случайных чисел</title>
+  <script>
+    function generateNumbers() {
+      var count = parseInt(document.getElementById('countInput').value);
+      var numbersContainer = document.getElementById('numbersContainer');
+      numbersContainer.innerHTML = ''; // Очищаем контейнер перед генерацией новых чисел
+      
+      for (var i = 0; i < count; i++) {
+        var randomNumber = Math.floor(Math.random() * 100) + 1; // Генерируем случайное число от 1 до 100
+        var numberElement = document.createElement('p');
+        numberElement.textContent = randomNumber;
+        numbersContainer.appendChild(numberElement);
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Генератор случайных чисел</h1>
+  
+  <label for="countInput">Количество чисел:</label>
+  <input type="number" id="countInput" value="100">
+  <button onclick="generateNumbers()">Сгенерировать</button>
+  
+  <div id="numbersContainer"></div>
+</body>
 </html>
