@@ -1,26 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Генератор случайных чисел</title>
-  <script>
-    function generateNumbers() {
-      var count = 1000; // Устанавливаем количество чисел равным 1000
-      var numbersContainer = document.getElementById('numbersContainer');
-      numbersContainer.innerHTML = ''; // Очищаем контейнер перед генерацией новых чисел
-      
-      for (var i = 0; i < count; i++) {
-        var randomNumber = Math.floor(Math.random() * (86 - 42 + 1)) + 42; // Генерируем случайное число от 42 до 86
-        var numberElement = document.createElement('p');
-        numberElement.textContent = randomNumber;
-        numbersContainer.appendChild(numberElement);
-      }
-    }
-
-    // Вызываем функцию generateNumbers() при загрузке страницы
-    window.onload = generateNumbers;
-  </script>
+  <title>Открыть .txt файл</title>
 </head>
 <body>
-  <div id="numbersContainer"></div>
+  <h1>Открыть .txt файл</h1>
+  
+  <p>Нажмите на ссылку ниже, чтобы открыть файл .txt:</p>
+  
+  <a href="numbers.txt" download>ТХТ</a>
 </body>
 </html>
